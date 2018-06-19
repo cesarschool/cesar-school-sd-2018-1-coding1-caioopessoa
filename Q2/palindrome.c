@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-/**
- * Escreva uma função que analisa uma dada palavra ou frase, retornando se a mesma é um palíndromo ou não.
- * 
- * Função: bool isPalindrome (char[] sentence, int length)
- * Input:
- * - sentence: array de caracteres em minúsculo da palavra ou frase a ser analisada.
- * - length: tamanho do array - número de caracteres
- * Output: true se a sentença é um palídromo, falso caso negativo.
- */
 
 bool isPalindrome (char sentence[], int length) {
-    printf("\nisPalindrome::START: %s, %d\n", sentence, length);
+    printf("\nisPalindrome::START: %s, %d\n", sentence, length); 
+int checks=0 ,i ;
+for(i = 0 ; i< length ; i++){
+  if (sentence[i] == sentence[length-1-i]){
+    checks++;
+  
+  }
 
-    // TODO: YOUR CODE HERE!
-    
+}
+  if(length == checks){
+    printf("True");
+  } 
+  else{
+    printf("False");
+  }
     printf("\nisPalindrome::END\n");
     return false;
 }
@@ -34,4 +36,3 @@ int main()
 
     return 0;
 }
- 
